@@ -1,0 +1,14 @@
+.loadingButton {
+    position: absolute !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: rgba(black, 0.3) !important;
+    z-index: 100 !important;
+    border-radius: 20px !important;
+    cursor: not-allowed !important;
+}

@@ -1,0 +1,394 @@
+.top_up_box {
+    width: 60%;
+    // height: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $superColor;
+    padding: 15px;
+    border-radius: 20px;
+    z-index: 2;
+
+    .exit {
+        position: absolute;
+        top: 0;
+        right: 15px;
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    h2 {
+        color: $greenColor;
+        font-weight: 600;
+    }
+
+    select {
+        font-size: $l;
+    }
+
+    .QR_bank {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px;
+        border: 3px solid $greenColor;
+        border-radius: 20px;
+        margin-top: 20px;
+
+        // height: 70%;
+        h4 {
+            ion-icon {
+                margin-right: 5px;
+            }
+        }
+
+        .QR_content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            // justify-content: center;
+            .QR_code {
+                width: 33%;
+                height: 33%;
+                margin: 10px 30px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .manual {
+            width: 100%;
+            height: 40%;
+            // background-color: #fff;
+
+            .manual_content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+
+                .right {
+                    width: 50%;
+                    margin-left: 20px;
+
+                    .manual_info {
+                        width: 96%;
+                        height: 60px;
+                        background-color: rgb(240, 236, 236);
+                        padding: 5px 16px;
+                        border-radius: 8px;
+                        margin-bottom: 5px;
+
+                        .top {
+                            margin-bottom: 5px;
+
+                            span {
+                                font-size: $s;
+                            }
+                        }
+
+                        .bottom {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            span {
+                                font-size: $m;
+                            }
+
+                            img {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .left {
+                    width: 50%;
+
+                    .manual_info {
+                        width: 96%;
+                        height: 60px;
+                        background-color: rgb(240, 236, 236);
+                        padding: 5px 16px;
+                        border-radius: 8px;
+                        margin-bottom: 5px;
+
+                        .top {
+                            margin-bottom: 5px;
+
+                            span {
+                                font-size: $s;
+                            }
+                        }
+
+                        .bottom {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            span {
+                                font-size: $m;
+                            }
+
+                            img {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .QR_zaloPay {
+        width: 100%;
+        background-color: #ffffff;
+        padding: 10px;
+        border: 3px solid $greenColor;
+        border-radius: 20px;
+        margin-top: 20px;
+
+        // height: 70%;
+        h4 {
+            img {
+                width: 30px;
+                height: 30px;
+                margin-right: 10px;
+            }
+
+            .zaloPay {
+                width: 100px;
+                height: 30px;
+                margin-left: 10px;
+            }
+        }
+
+        .QR_content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            // justify-content: center;
+            .QR_code {
+                width: 33%;
+                height: 33%;
+                margin: 10px 30px;
+            }
+        }
+
+        .manual {
+            width: 100%;
+            height: 40%;
+            // background-color: #fff;
+
+            .manual_content {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+
+                .right {
+                    width: 50%;
+                    margin-left: 20px;
+
+                    .manual_info {
+                        width: 96%;
+                        height: 60px;
+                        background-color: rgb(240, 236, 236);
+                        padding: 5px 16px;
+                        border-radius: 8px;
+                        margin-bottom: 5px;
+
+                        .top {
+                            margin-bottom: 5px;
+
+                            span {
+                                font-size: $s;
+                            }
+                        }
+
+                        .bottom {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            span {
+                                font-size: $m;
+                            }
+
+                            img {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+                .left {
+                    width: 50%;
+
+                    .manual_info {
+                        width: 96%;
+                        height: 60px;
+                        background-color: rgb(240, 236, 236);
+                        padding: 5px 16px;
+                        border-radius: 8px;
+                        margin-bottom: 5px;
+
+                        .top {
+                            margin-bottom: 5px;
+
+                            span {
+                                font-size: $s;
+                            }
+                        }
+
+                        .bottom {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: space-between;
+
+                            span {
+                                font-size: $m;
+                            }
+
+                            img {
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+    }
+
+    .warning {
+        margin-top: 30px;
+
+        h4 {
+            color: $orangeColor;
+        }
+
+        .contact {
+            margin-bottom: 20px;
+
+            .contact_info {
+                margin-bottom: 10px;
+
+                span {
+                    margin-left: 5px;
+                }
+            }
+
+        }
+    }
+}
+
+.top_up_shadow {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    z-index: 1;
+}
+
+.amount {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(128, 128, 128, 0.7);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .subscribe {
+        position: relative;
+        height: 140px;
+        width: 240px;
+        padding: 20px;
+        background-color: #FFF;
+        border-radius: 4px;
+        color: #333;
+        box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.4);
+    }
+
+    .subscribe:after {
+        position: absolute;
+        content: "";
+        right: -10px;
+        bottom: 18px;
+        width: 0;
+        height: 0;
+        border-left: 0px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #1a044e;
+    }
+
+    .subscribe p {
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 4px;
+        line-height: 28px;
+    }
+
+    .subscribe input {
+        position: absolute;
+        bottom: 30px;
+        border: none;
+        border-bottom: 1px solid #d4d4d4;
+        padding: 10px;
+        width: 82%;
+        background: transparent;
+        transition: all .25s ease;
+    }
+
+    .subscribe input:focus {
+        outline: none;
+        border-bottom: 1px solid #0d095e;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 'sans-serif';
+    }
+
+    .subscribe .submit-btn {
+        position: absolute;
+        border-radius: 30px;
+        border-bottom-right-radius: 0;
+        border-top-right-radius: 0;
+        background-color: $greenColor;
+        color: #FFF;
+        padding: 12px 25px;
+        display: inline-block;
+        font-size: 12px;
+        font-weight: bold;
+        letter-spacing: 5px;
+        right: -10px;
+        bottom: -20px;
+        cursor: pointer;
+        transition: all .25s ease;
+        box-shadow: -5px 6px 20px 0px rgba(26, 26, 26, 0.4);
+    }
+
+    .subscribe .submit-btn:hover {
+        background-color: #23ca23;
+        box-shadow: -5px 6px 20px 0px rgba(88, 88, 88, 0.569);
+    }
+}

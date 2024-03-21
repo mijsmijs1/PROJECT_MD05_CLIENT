@@ -1,0 +1,143 @@
+.carousel_box{
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    border: 4px solid $superColor;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .carousel_app {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+        .img_right{
+             margin: 10px 40px 10px 0px; 
+             width: 200px;
+             height: 220px;
+             cursor: pointer;
+             &:hover{
+                transform: scale(1.05);
+                transition: all 0.2s;
+             }
+        }
+        .carousel {
+            position: relative;
+            height: 300px !important;
+    
+            img {
+                border-radius: 10px;
+            }
+    
+            .navigation {
+                position: absolute;
+                top: 40%;
+                left: -2%;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: space-between;
+                width: 87%;
+                padding: 0 20px;
+                box-sizing: border-box;
+    
+    
+    
+                button {
+                    ion-icon {
+                        font-size: 20px;
+                        color: $primaryColor;
+                        border: none;
+                    }
+                }
+    
+            }
+    
+            .mydots {
+                width: 100px;
+                height: 6px;
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                position: absolute;
+                left: 38%;
+                bottom: 25%;
+    
+                span {
+                    width: 9px;
+                    height: 9px;
+                    border-radius: 50%;
+                    background: gray;
+                    margin: 0 2px;
+                    cursor: pointer;
+                }
+    
+                .active {
+                    background: $blueColor;
+    
+                }
+            }
+    
+            .pic_right {
+                position: absolute;
+                top: 43%;
+                right: 12.5%;
+                transform: translateY(-50%);
+                display: flex;
+                flex-direction: column;
+    
+                img {
+                    margin-bottom: 20px;
+                    cursor: pointer;
+                }
+    
+                :hover {
+                    transform: scale(1.05);
+                    transition: all 0.2s;
+                }
+            }
+    
+            .pic_bottom {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+    
+    
+                img {
+                    margin-left: 20px;
+                    cursor: pointer;
+    
+                }
+    
+                :hover {
+                    transform: scale(1.05);
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+    .menu{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .menu_item{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            img{
+                width: 50px;
+                height: 50px;
+                margin-bottom: 10px;
+                &:hover{
+                    transform: scale(1.05);
+                    transition: all 0.2s;
+                }
+            }
+        }
+    }
+}

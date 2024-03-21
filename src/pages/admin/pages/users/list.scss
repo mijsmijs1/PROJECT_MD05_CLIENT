@@ -1,0 +1,284 @@
+.user_info_box {
+    display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+    grid-area: main;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin: 10px 0;
+    position: relative;
+    h1{
+        margin-left: 20px;
+    }
+    .button-container {
+        margin: 10px;
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007bff; // Màu nền cho nút
+            color: #fff; // Màu chữ cho nút
+            border: none; // Loại bỏ đường viền của nút
+            border-radius: 5px; // Bo tròn góc cho nút
+            cursor: pointer;
+            transition: background-color 0.3s ease; // Hiệu ứng chuyển đổi màu nền khi di chuột qua nút
+        }
+
+        // Định nghĩa kiểu dáng khi di chuột qua nút
+        .btn:hover {
+            background-color: #0056b3; // Màu nền khi di chuột qua nút
+        }
+
+        // Áp dụng kiểu dáng cho nút "User List"
+        .user-list-btn {
+            margin-right: 10px; // Khoảng cách với nút kế bên (nếu có)
+        }
+
+        // Áp dụng kiểu dáng cho nút "Blocked users"
+        .blocked-users-btn {
+            margin-right: 10px; // Khoảng cách với nút kế bên (nếu có)
+        }
+
+    }
+
+    .user_create_form {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(grey, 0.7);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            padding: 10px;
+            width: 450px;
+            height: 450px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 2px 2px rgb(102, 101, 101);
+            position: relative;
+
+            .btn_box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                span {
+                }
+            }
+
+            .btn-success {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .input_avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                span {
+                    position: absolute;
+                    z-index: 1;
+                    color: white;
+                    font-weight: 900;
+                    text-shadow: 2px 2px 2px black;
+                }
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                }
+            }
+
+            .pictures {
+                display: flex;
+                flex-wrap: wrap;
+
+                .item {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    margin: 0 10px 10px 0;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .btn-danger {
+                        border-radius: 5px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    .user_edit_form {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(grey, 0.7);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            padding: 10px;
+            width: 450px;
+            height: 500px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 2px 2px rgb(102, 101, 101);
+            position: relative;
+
+            .btn_box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+
+                span {
+                }
+            }
+
+            .btn-success {
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .input_avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 50%;
+                    cursor: pointer;
+                }
+
+                span {
+                    position: absolute;
+                    z-index: 1;
+                    color: white;
+                    font-weight: 900;
+                    text-shadow: 2px 2px 2px black;
+                }
+
+                input {
+                    position: absolute;
+                    opacity: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                    cursor: pointer;
+                }
+            }
+
+            .pictures {
+                display: flex;
+                flex-wrap: wrap;
+
+                .item {
+                    width: 75px;
+                    height: 75px;
+                    border-radius: 50%;
+                    margin: 0 10px 10px 0;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .btn-danger {
+                        border-radius: 5px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+    .table_container {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(grey, 0.7);
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .table_content {
+            width: 60%;
+            background-color: #fff;
+            padding: 10px;
+
+            Table {
+                width: 100%;
+            }
+
+            .btn_box {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 20px;
+                background-color: #fff;
+
+                span {
+                    margin-right: 50px;
+                }
+            }
+        }
+        .table_receipt{
+            width: 90%;
+        }
+
+    }
+
+}

@@ -1,0 +1,65 @@
+{
+    "navbar": {
+        "placeHolderSearch": "Search...",
+        "login": "Login",
+        "signup": "Sign up",
+        "logout": "Log out",
+        "topup": "Top up",
+        "hi": "Hi",
+        "wallet": "Wallet",
+        "post": "Post news",
+        "category": "CATEGORY",
+        "categoryMall": "Category",
+        "comment": "Commments",
+        "GetApp": "Get the app",
+        "connect": "Connect",
+        "help": "Help"
+    },
+    "sidebar": {
+        "home": "Home",
+        "courses": "Courses",
+        "about": "About"
+    },
+    "footer": {
+        "Customersupport": "Customer support",
+        "DiscountCards": "Discount Cards",
+        "OnlineShoppingGuide": "Online Shopping Guide",
+        "BusinessOffers": "Business Offers",
+        "InstallmentPolicy": "Installment Policy",
+        "RepairServices": "Repair Services",
+        "PurchasePolicy": "Purchase Policy",
+        "WarrantyPolicy": "Warranty Policy",
+        "ReturnPolicy": "Return Policy",
+        "PaymentPolicy": "Payment Policy",
+        "HomeDeliveryAndInstallation": "Home Delivery and Installation",
+        "PCAndLaptopInstallationAndUpgradeServices": "PC and Laptop Installation and Upgrade Services",
+        "AboutPhuQuy": "About Phu Quy",
+        "StoreLocations": "Store Locations",
+        "ServiceCenter": "Service Center",
+        "PrivacyPolicy": "Privacy Policy",
+        "TechnologyNews": "Technology News",
+        "CommunityPhuQuy": "Community Phu Quy",
+        "CallToPurchase": "Call to Purchase (toll-free)",
+        "CustomerCare": "Customer Care",
+        "FacebookPhuQuy": "Facebook Phu Quy",
+        "PhuQuyMedia": "Phu Quy Media",
+        "ZaloPhuQuy": "Zalo Phu Quy",
+        "CustomerSupportEmail": "Customer Support Email",
+        "QuoteInquiryContact": "Quote Inquiry Contact",
+        "DevelopmentCooperation": "Development Cooperation",
+        "ListOfOnlinePaymentBanks": "List of Online Payment Banks"
+    },
+    "product":{
+        "PostForYou":"Posted for you"
+    },
+    "carousel": {
+        "sellPhone": "Sell Phone",
+        "TopUp": "Top Up",
+        "Voucher": "Voucher",
+        "SellCar": "Sell Car",
+        "Premium": "Premium Package",
+        "News": "News",
+        "PostNews": "Post News",
+        "savedNews": "Saved News"
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "navbar": {
+        "placeHolderSearch": "Tìm kiếm...",
+        "login": "Đăng nhập",
+        "signup": "Đăng kí",
+        "logout": "Đăng xuất",
+        "topup": "Nạp tiền",
+        "hi": "Chào",
+        "wallet": "Ví tiền",
+        "post": "Đăng tin",
+        "category": "Danh mục",
+        "categoryMall": "Danh mục",
+        "comment": "Đóng góp ý kiến",
+        "GetApp": "Tải ứng dụng",
+        "connect": "Liên hệ",
+        "help": "Trợ giúp"
+    },
+    "sidebar": {
+        "home": "Trang chủ",
+        "courses": "Khóa học",
+        "about": "Giới thiệu"
+    },
+    "footer": {
+        "Customersupport": "Hỗ trợ khách hàng",
+        "DiscountCards": "Thẻ giảm giá",
+        "OnlineShoppingGuide": "Hướng dẫn mua sắm trực tuyến",
+        "BusinessOffers": "Các ưu đãi dành cho doanh nghiệp",
+        "InstallmentPolicy": "Chính sách trả góp",
+        "RepairServices": "Dịch vụ sửa chữa",
+        "PurchasePolicy": "Chính sách mua hàng",
+        "WarrantyPolicy": "Chính sách bảo hành",
+        "ReturnPolicy": "Chính sách đổi trả",
+        "PaymentPolicy": "Chính sách thanh toán",
+        "HomeDeliveryAndInstallation": "Giao hàng và lắp đặt tại nhà",
+        "PCAndLaptopInstallationAndUpgradeServices": "Dịch vụ cài đặt và nâng cấp PC và Laptop",
+        "AboutPhuQuy": "Về Phú Quý",
+        "StoreLocations": "Địa chỉ cửa hàng",
+        "ServiceCenter": "Trung tâm dịch vụ",
+        "PrivacyPolicy": "Chính sách bảo mật",
+        "TechnologyNews": "Tin tức công nghệ",
+        "CommunityPhuQuy": "Cộng đồng Phú Quý",
+        "CallToPurchase": "Gọi để mua hàng (miễn phí)",
+        "CustomerCare": "Chăm sóc khách hàng",
+        "FacebookPhuQuy": "Facebook Phú Quý",
+        "PhuQuyMedia": "Phú Quý Media",
+        "ZaloPhuQuy": "Zalo Phú Quý",
+        "CustomerSupportEmail": "Email hỗ trợ khách hàng",
+        "QuoteInquiryContact": "Liên hệ yêu cầu báo giá",
+        "DevelopmentCooperation": "Hợp tác phát triển",
+        "ListOfOnlinePaymentBanks": "Danh sách ngân hàng thanh toán trực tuyến"
+    },
+    "product":{
+        "PostForYou":"Tin đăng dành cho bạn"
+    },
+    "carousel": {
+        "sellPhone": "Thu mua điện thoại",
+        "TopUp": "Nạp Đồng",
+        "Voucher": "Ưu Đãi",
+        "SellCar": "Mua bán ô tô",
+        "Premium": "Gói Premium",
+        "News": "Tin đăng",
+        "PostNews": "Đăng tin buôn bán",
+        "savedNews": "Tin đã lưu"
+    }
+}

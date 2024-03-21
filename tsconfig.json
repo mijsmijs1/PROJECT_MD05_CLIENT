@@ -13,9 +13,20 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
+     /* Config Alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*":["./src/*","./dist/*",""],
+      "@components/*":["./src/components/*"],
+      "@pages/*":["./src/pages/*"],
+      "@services/*":["./src/services/*"],
+      "@stores/*":["./src/stores/*"],
+      "@slices/*":["./src/stores/slices/*"],
+      "@utils/*":["./src/utils/*"],
+      "@routes/*":["./src/routes/*"],
+    },
     /* Linting */
-    "strict": true,
+    "strict": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
