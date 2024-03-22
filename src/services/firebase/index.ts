@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, deleteUser, reauthenticateWithCredential } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, deleteUser} from "firebase/auth";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAjmF4Sof6BiU6SP-c0yIPqaGPuHrSFYnk",
@@ -14,7 +14,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const user = auth.currentUser;
+// const user = auth.currentUser;
 
 
 export async function uploadToFirebase(file, fallBackUrl) {
@@ -57,23 +57,23 @@ export async function loginWithGithub() {
     }
 }
 
-export async function reauthenticate() {
-    // Đây là một dòng mã trong đó chúng ta gán giá trị trả về từ hàm promptForCredentials() 
-    //vào biến credential. Hàm promptForCredentials()là một hàm để hiển 
-    //thị giao diện người dùng và lấy thông tin xác thực từ họ. Ví dụ, hàm này có thể sử dụng prompt() 
-    //hoặc các thư viện UI để hiển thị một hộp thoại cho người dùng nhập thông tin xác thực như tên người
-    // dùng và mật khẩu.
-    const credential = promptForCredentials();
-    //gọi hàm reauthenticateWithCredential() để xác thực lại người dùng với chứng chỉ 
-    //(credential) đã nhập.
-    reauthenticateWithCredential(user, credential)
-        .then(() => {
-            // lúc này đã call api thành công và xác thực cho tất cả các tài khoản nằm trong phần users của
-            //authentication của firebase
-        }).catch((error) => {
-            //lỗi
-        });
-}
+// export async function reauthenticate() {
+//     // Đây là một dòng mã trong đó chúng ta gán giá trị trả về từ hàm promptForCredentials() 
+//     //vào biến credential. Hàm promptForCredentials()là một hàm để hiển 
+//     //thị giao diện người dùng và lấy thông tin xác thực từ họ. Ví dụ, hàm này có thể sử dụng prompt() 
+//     //hoặc các thư viện UI để hiển thị một hộp thoại cho người dùng nhập thông tin xác thực như tên người
+//     // dùng và mật khẩu.
+//     const credential = promptForCredentials();
+//     //gọi hàm reauthenticateWithCredential() để xác thực lại người dùng với chứng chỉ 
+//     //(credential) đã nhập.
+//     reauthenticateWithCredential(user, credential)
+//         .then(() => {
+//             // lúc này đã call api thành công và xác thực cho tất cả các tài khoản nằm trong phần users của
+//             //authentication của firebase
+//         }).catch((error) => {
+//             //lỗi
+//         });
+// }
 
 export async function logout() {
     //Phương thức onAuthStateChanged lắng nghe sự thay đổi trong trạng thái xác thực của người dùng. 

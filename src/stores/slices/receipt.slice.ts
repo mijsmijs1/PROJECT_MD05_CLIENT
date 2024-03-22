@@ -1,6 +1,6 @@
-import { api } from "@/services/apis";
 
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+
+import {  createSlice } from "@reduxjs/toolkit";
 const receiptSlice = createSlice({
     name: "receipt",
     initialState: {

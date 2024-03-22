@@ -3,7 +3,7 @@ import './Navbar.scss'
 import { Store } from '@/stores';
 
 
-const Navbar = ({ sidebarOpen, openSidebar }) => {
+const Navbar = ({ openSidebar }) => {
     const memberStore = useSelector((store: Store) => store.memberStore);
     return (
         <div className="navbar">

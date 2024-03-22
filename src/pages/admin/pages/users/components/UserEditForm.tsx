@@ -1,12 +1,7 @@
 import { randomId } from '@mieuteacher/meomeojs';
-import React, { useState } from 'react'
 import { InputGroup, Form } from 'react-bootstrap';
-
-
-
 import { Modal } from 'antd';
-import { useSelector, useDispatch } from 'react-redux';
-import { Store } from '@/stores';
+import { useDispatch } from 'react-redux';
 import { uploadToFirebase } from '@/services/firebase';
 import { userAction } from '@/stores/slices/user.slice';
 import { api } from '@/services/apis';
@@ -14,7 +9,6 @@ import { api } from '@/services/apis';
 export default function UserEditForm({ showEdit, setShowEdit, updateData }) {
     const dispatch = useDispatch();
     console.log('updateData', updateData);
-    const userStore = useSelector((store: Store) => store.userStore)
     async function handleEditUser(e) {
         e.preventDefault();
         try {
@@ -124,8 +118,8 @@ export default function UserEditForm({ showEdit, setShowEdit, updateData }) {
                         <InputGroup.Text style={{ width: "100px" }} id="basic-addon1">Status</InputGroup.Text>
                         <Form.Select name='status' aria-label="Default select example">
                             <option value={updateData.status}>{updateData.status ? "Active" : "Blocked"}</option>
-                            <option key={randomId()} value={true}>Active</option>
-                            <option key={randomId()} value={false}>Block</option>
+                            <option key={randomId()} value={1}>Active</option>
+                            <option key={randomId()} value={0}>Block</option>
                         </Form.Select>
                     </InputGroup>
                 }

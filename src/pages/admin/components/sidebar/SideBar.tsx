@@ -1,5 +1,5 @@
 import './sidebar.scss';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { memberAction } from '@/stores/slices/member.slice';
 import { Modal } from 'antd';

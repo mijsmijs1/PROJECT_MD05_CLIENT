@@ -9,7 +9,7 @@ class topUpSocketClass {
         status: boolean,
         message: string[]
     } | null> {
-        return await new Promise((resolve, reject) => {
+        return await new Promise((resolve) => {
             this.socket = io(`${import.meta.env.VITE_SOCKET_LOGIN_URL}`, {
                 reconnectionDelayMax: 10000,
                 auth: {
@@ -45,7 +45,7 @@ class topUpSocketClass {
     }
     async topUp() {
         console.log("da vao socket 2");
-        return await new Promise((resolve, reject) => {
+        return await new Promise((resolve) => {
             console.log("da vao socket 1");
             this.socket?.on("topUp", (res) => {
                 console.log("da vao socket");

@@ -1,5 +1,5 @@
 import { randomId } from '@mieuteacher/meomeojs';
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { InputGroup, Form } from 'react-bootstrap';
 import { productAction } from '../../../../../store/slices/product.slice';
 import { uploadToFirebase } from '@services/firebase'

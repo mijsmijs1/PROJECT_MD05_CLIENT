@@ -74,7 +74,7 @@ export default function ProductInfo() {
   useEffect(() => {
 
   }, [categoryName])
-  async function handleAddToCart(product, quantity, e) {
+  async function handleAddToCart(product) {
     try {
       if (product.userId == authenStore.data.id) {
         Modal.error({
@@ -224,8 +224,8 @@ export default function ProductInfo() {
           <div className='checkout'>
 
             {product?.branchId == 6 && <button
-              onClick={(e) => {
-                handleAddToCart(product, 1, e)
+              onClick={() => {
+                handleAddToCart(product)
 
               }}>
               Mua ngay! <div className="star-1">
@@ -235,7 +235,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -260,7 +260,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -285,7 +285,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -310,7 +310,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -335,7 +335,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -360,7 +360,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -380,8 +380,8 @@ export default function ProductInfo() {
               </div>
             </button>}
             {product?.branchId !== 6 && <button
-              onClick={(e) => {
-                handleAddToCart(product, 1, e)
+              onClick={() => {
+                handleAddToCart(product)
               }}>
               Lưu tin! <div className="star-1">
                 <svg
@@ -390,7 +390,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -415,7 +415,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -440,7 +440,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -465,7 +465,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -490,7 +490,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}
@@ -515,7 +515,7 @@ export default function ProductInfo() {
                   style={{
                     shapeRendering: "geometricPrecision",
                     textRendering: "geometricPrecision",
-                    imageRendering: "optimizeQuality",
+                    
                     fillRule: "evenodd",
                     clipRule: "evenodd"
                   }}

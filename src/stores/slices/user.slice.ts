@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { user } from "./authen.slice";
-type AvailableStatus = "active" | "inactive"
 type addModal = true | false
 export type course_access = {
     id: number;

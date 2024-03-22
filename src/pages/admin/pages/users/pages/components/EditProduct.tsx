@@ -1,6 +1,6 @@
 import { api } from '@/services/apis';
 import { Modal, message } from 'antd';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import locationData from "../../../../../../../location.json"
 import { productAction } from '@/stores/slices/product.slice';

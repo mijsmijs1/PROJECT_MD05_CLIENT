@@ -1,9 +1,8 @@
 import { api } from '@/services/apis';
-import { Store } from '@/stores';
-import { authenAction } from '@/stores/slices/authen.slice';
+
 import { Modal, message } from 'antd';
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux';
 import locationData from "../../../../../../location.json"
 import { productAction } from '@/stores/slices/product.slice';
 export default function UserInfo({ showEditProduct, setShowEditProduct, updateData }: {
@@ -12,7 +11,6 @@ export default function UserInfo({ showEditProduct, setShowEditProduct, updateDa
     updateData: any
 }) {
     const dispatch = useDispatch();
-    const authenStore = useSelector((store: Store) => store.authenStore)
     const [cities, setCities] = useState([]);
     const [selectedCity, setSelectedCity] = useState('');
     const [districts, setDistricts] = useState([]);

@@ -100,7 +100,7 @@ export default function Home() {
 
                     (memberStore.data != null && !first && !contactConfirmState) && (
                         <div className="container">
-                            <Navbar sidebarOpen={sidebarOpen} openSidebar={openSidebar} />
+                            <Navbar openSidebar={openSidebar} />
                             <Sidebar sidebarOpen={sidebarOpen} closeSidebar={closeSidebar} />
                             <Outlet />
                         </div>

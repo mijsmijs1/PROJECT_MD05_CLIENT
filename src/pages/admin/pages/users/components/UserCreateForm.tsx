@@ -1,17 +1,10 @@
 import { randomId } from '@mieuteacher/meomeojs';
-import React, { useState } from 'react'
 import { InputGroup, Form } from 'react-bootstrap';
-
-
-
 import { Modal } from 'antd';
-import { useSelector } from 'react-redux';
-import { Store } from '@/stores';
 import { uploadToFirebase } from '@/services/firebase';
 import { api } from '@/services/apis';
 import { userAction } from '@/stores/slices/user.slice';
 export default function UserCreateForm({ dispatch }) {
-  const userStore = useSelector((store: Store) => store.userStore)
   async function handleAddUser(e) {
     e.preventDefault();
     try {
@@ -102,8 +95,8 @@ export default function UserCreateForm({ dispatch }) {
           <InputGroup.Text style={{ width: "100px" }} id="basic-addon1">Status</InputGroup.Text>
           <Form.Select name='status' aria-label="Default select example">
             <option value={null}>Please choose</option>
-            <option key={randomId()} value={true}>Active</option>
-            <option key={randomId()} value={false}>Block</option>
+            <option key={randomId()} value={1}>Active</option>
+            <option key={randomId()} value={0}>Block</option>
           </Form.Select>
         </InputGroup>
         <button type='submit' className='btn btn-success'>Add</button>

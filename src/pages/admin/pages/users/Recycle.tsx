@@ -259,7 +259,7 @@ export default function Recycle() {
                             </thead>
                             <tbody>
                                 {
-                                    updateData.receipts?.map((item, index) => {
+                                    updateData.receipts?.map((item) => {
                                         if (item.status != "delete") {
                                             return (
                                                 <tr key={randomId()}>
@@ -313,7 +313,7 @@ export default function Recycle() {
                             </thead>
                             <tbody>
                                 {
-                                    updateData.receipts?.map((item, index) => {
+                                    updateData.receipts?.map((item) => {
                                         if (item.status == "delete") {
                                             return (
                                                 <tr key={randomId()}>

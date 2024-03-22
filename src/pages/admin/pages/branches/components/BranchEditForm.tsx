@@ -70,8 +70,8 @@ export default function BranchEditForm({ dispatch, setDisplayEdit, updateData }:
                     <InputGroup.Text style={{ width: "100px" }} id="basic-addon1">Status</InputGroup.Text>
                     <Form.Select name='status' aria-label="Default select example" value={updateData.status}>
                         <option value={null}>Please choose</option>
-                        <option key={randomId()} value={true}>Active</option>
-                        <option key={randomId()} value={false}>Block</option>
+                        <option key={randomId()} value={1}>Active</option>
+                        <option key={randomId()} value={0}>Block</option>
                     </Form.Select>
                 </InputGroup>
 

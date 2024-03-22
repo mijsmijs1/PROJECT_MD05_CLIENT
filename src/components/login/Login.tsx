@@ -1,9 +1,9 @@
 // Import React and CSS file if needed
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './login.scss';
 import { Modal } from 'antd';
 import { api } from '@/services/apis';
-import { loginWithGoogle, reauthenticate } from '@/services/firebase';
+import { loginWithGoogle } from '@/services/firebase';
 import LoadingButton from '../loadingButton/LoadingButton';
 import ForgotPass from './components/ForgotPass';
 
@@ -166,7 +166,7 @@ const Login = ({ setModalVisible }: { setModalVisible: any }) => {
                                 onClick={async () => {
                                     setLoad(true)
                                     let result = await loginWithGoogle();
-                                    reauthenticate();
+                                    // reauthenticate();
                                     handleLoginWithSosial(result, "Google")
                                 }}
                             >
@@ -304,7 +304,7 @@ const Login = ({ setModalVisible }: { setModalVisible: any }) => {
                                 onClick={async () => {
                                     setLoad(true)
                                     let result = await loginWithGoogle();
-                                    reauthenticate();
+                                    // reauthenticate();
                                     handleLoginWithSosial(result, "Google")
                                 }}
                             >

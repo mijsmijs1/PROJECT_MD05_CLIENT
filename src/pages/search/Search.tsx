@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import './search.scss'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { convertToVND } from '@mieuteacher/meomeojs';

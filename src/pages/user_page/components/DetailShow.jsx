@@ -1,9 +1,7 @@
-import { randomId } from '@mieuteacher/meomeojs';
-import React, { useState } from 'react'
-import { InputGroup, Form, FormControl } from 'react-bootstrap';
-import { uploadToFirebase } from '@services/firebase'
+
+import { InputGroup, FormControl } from 'react-bootstrap';
 import { api } from '@/services/apis';
-import { useSelector, useDispatch } from 'react-redux';
+import {  useDispatch } from 'react-redux';
 import { Modal } from 'antd';
 import { productAction } from '@/stores/slices/product.slice';
 export default function DetailShow({ showInfo, setShowInfo, updateData, setUpdateData }) {

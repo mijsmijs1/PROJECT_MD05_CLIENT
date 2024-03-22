@@ -1,6 +1,5 @@
 import { api } from "@/services/apis";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 export type AvailableStatus = "active" | "inactive"
 export type Category = {
     id: number;

@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import './carousel.scss';
 import { useTranslation } from 'react-i18next';
+
 export const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
@@ -95,7 +96,7 @@ export const Carousel = () => {
           <div className="mydots">
             {images.map((image, index) => (
               <span
-                key={index}
+                key={`${index}${image}`}
                 className={index === currentIndex ? 'active' : ''}
                 onClick={() => setCurrentIndex(index)}
               ></span>
@@ -106,7 +107,7 @@ export const Carousel = () => {
       </div>
       <div className='menu'>
         {icon.map((item) => {
-          return <div className='menu_item' key={Math.random()*Date.now()}>
+          return <div className='menu_item' key={Math.random() * Date.now()}>
             <img src={item.img}></img>
             <p>{item.text}</p>
           </div>

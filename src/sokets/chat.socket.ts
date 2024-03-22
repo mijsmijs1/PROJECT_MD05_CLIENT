@@ -25,7 +25,7 @@ class SocketChat {
         status: boolean,
         message: string[]
     } | null> {
-        return await new Promise((resolve, reject) => {
+        return await new Promise((resolve) => {
             this.socket = io(`${import.meta.env.VITE_SOCKET_LOGIN_URL}?tokenChat=${localStorage.getItem('token')}`)
             this.socket.on('chat-history', (data: Chat[]) => {
                 store.dispatch(chatAction.setData(data))

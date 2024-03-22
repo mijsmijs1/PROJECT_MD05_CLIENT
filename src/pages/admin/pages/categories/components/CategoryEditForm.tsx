@@ -1,11 +1,10 @@
 import { randomId } from '@mieuteacher/meomeojs';
-import React, { useState } from 'react'
+
 import { InputGroup, Form } from 'react-bootstrap';
 import { Category, categoryAction } from '@slices/category.slice';
-import { uploadToFirebase } from '@services/firebase'
+
 import { Modal, message } from 'antd';
-import { useSelector } from 'react-redux';
-import { Store } from '@/stores';
+
 import { api } from '@/services/apis';
 
 export default function CategoryEditForm({ dispatch, setDisplayEdit, updateData }: {
@@ -75,8 +74,8 @@ export default function CategoryEditForm({ dispatch, setDisplayEdit, updateData 
                     <InputGroup.Text style={{ width: "100px" }} id="basic-addon1">Status</InputGroup.Text>
                     <Form.Select name='status' aria-label="Default select example" value={updateData.status}>
                         <option value={null}>Please choose</option>
-                        <option key={randomId()} value={true}>Active</option>
-                        <option key={randomId()} value={false}>Block</option>
+                        <option key={randomId()} value={1}>Active</option>
+                        <option key={randomId()} value={0}>Block</option>
                     </Form.Select>
                 </InputGroup>
                 <button type='submit' className='btn btn-success'>Save</button>

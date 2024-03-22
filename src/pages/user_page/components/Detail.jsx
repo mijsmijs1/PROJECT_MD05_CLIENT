@@ -1,5 +1,5 @@
 import { MDBTable, MDBTableBody } from 'mdb-react-ui-kit'
-import React from 'react'
+
 
 export default function Detail(showInfo,setShowInfo, updateData) {
     console.log('updateData',updateData);

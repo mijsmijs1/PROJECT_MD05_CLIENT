@@ -353,7 +353,7 @@ export default function Navbar({ setModalVisible }: { setModalVisible: any }) {
                                         title: "Confirm",
                                         content: "Bạn có chắc muốn xóa tin này?",
                                         onOk: async () => {
-                                          let result = await api.receipt.delete(supItem.id);
+                                          await api.receipt.delete(supItem.id);
                                           dispatch(receiptAction.deleteItem(supItem.id));
                                         }
                                       })
@@ -473,7 +473,7 @@ export default function Navbar({ setModalVisible }: { setModalVisible: any }) {
                 onClick={() => { navigate("/"); setShowNavbar(!showNavbar); setShowNavbar(!showNavbar) }}
               >
                 {t('sidebar.home')}</p>
-              <ModalSearch />
+
               <p
                 onClick={() => { navigate("/course/1"); setShowNavbar(!showNavbar); setShowNavbar(!showNavbar) }}
               >

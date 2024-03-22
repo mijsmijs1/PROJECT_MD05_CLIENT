@@ -1,4 +1,4 @@
-import React from 'react'
+
 import LoadingImg from "./loading.png"
 
 export default function Loading() {

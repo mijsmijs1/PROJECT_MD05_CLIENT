@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Table } from 'react-bootstrap';
 import { Modal } from 'antd'
 import { randomId, convertToVND } from '@mieuteacher/meomeojs';
@@ -427,7 +427,7 @@ export default function List() {
                 <div className="mydots">
                   {images.map((image, index) => (
                     <span
-                      key={index}
+                      key={index + image}
                       className={index === currentIndex ? 'active' : ''}
                       onClick={() => setCurrentIndex(index)}
                     ></span>
@@ -497,7 +497,7 @@ export default function List() {
           </thead>
           <tbody>
             {
-              productStore.product.length != 0 ? productStore.product?.map((product, index) => {
+              productStore.product.length != 0 ? productStore.product?.map((product) => {
                 if (product.status == "active" && product.moderationStatus == "active") {
                   return (
                     <tr key={randomId()}>
@@ -626,7 +626,7 @@ export default function List() {
           </thead>
           <tbody>
             {
-              productStore.product.length != 0 ? productStore.product?.map((product, index) => {
+              productStore.product.length != 0 ? productStore.product?.map((product) => {
                 if (product.status == "inactive") {
                   return (
                     <tr key={randomId()}>
@@ -773,7 +773,7 @@ export default function List() {
           </thead>
           <tbody>
             {
-              productStore.product.length != 0 ? productStore.product?.map((product, index) => {
+              productStore.product.length != 0 ? productStore.product?.map((product) => {
                 if (product.status == "done") {
                   return (
                     <tr key={randomId()}>
@@ -856,7 +856,7 @@ export default function List() {
           </thead>
           <tbody>
             {
-              productStore.product.length != 0 ? productStore.product?.map((product, index) => {
+              productStore.product.length != 0 ? productStore.product?.map((product) => {
                 if (product.status == "deny") {
                   return (
                     <tr key={randomId()}>
@@ -943,7 +943,7 @@ export default function List() {
           </thead>
           <tbody>
             {
-              productStore.product.length != 0 ? productStore.product?.map((product, index) => {
+              productStore.product.length != 0 ? productStore.product?.map((product) => {
                 if (product.status == "delete") {
                   return (
                     <tr key={randomId()}>

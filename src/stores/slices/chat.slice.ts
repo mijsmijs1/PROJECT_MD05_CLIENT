@@ -22,9 +22,6 @@ const chatSlice = createSlice({
         setData(state, action) {
             state.data = action.payload
         }
-    },
-    extraReducers: (builder) => {
-
     }
 })
 

@@ -2,7 +2,7 @@ import { api } from '@/services/apis';
 import { Store } from '@/stores';
 import { authenAction } from '@/stores/slices/authen.slice';
 import { Modal } from 'antd';
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 
 export default function UserInfo({ setShowUserInfo }: {
