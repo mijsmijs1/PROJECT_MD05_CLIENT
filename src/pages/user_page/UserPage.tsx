@@ -95,6 +95,7 @@ export default function UserPage() {
   const [imagesToChange, setImagesToChange] = useState(null);
   const [showInfoNoEdit, setShowInfoNoEdit] = useState(null);
   const [showEditProduct, setShowEditProduct] = useState(false);
+  const [buyPriority, setBuyPriority] = useState(false);
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
@@ -146,6 +147,7 @@ export default function UserPage() {
       if (status) {
         try {
           const res = await api.product.getProductByUserId(Number(authenStore.data.id), status, (page != 0) ? Number(page) : 1);
+
           if (res.status == 200) {
             dispatch(productAction.setData(res.data.data));
 
@@ -612,7 +614,7 @@ export default function UserPage() {
                     ></span>
                   ))}
                 </div>
-                {status == 'active' || status == 'inactive' && <button
+                {(status == 'active' || status == 'inactive') && <button
                   onClick={() => {
                     setDisplayChangePic(!displayChangePic)
                     setImagesToChange(images)
@@ -646,7 +648,7 @@ export default function UserPage() {
               </video>
 
             </div>
-            {status == 'active' || status == 'inactive' && <button onClick={() => {
+            {(status == 'active' || status == 'inactive') && <button onClick={() => {
               setDisplayChangeVideo(!displayChangeVideo)
             }} type='button' className='btn btn-danger change'>Change Video!</button>}
           </div>
@@ -842,22 +844,31 @@ export default function UserPage() {
                               content: "Are you sure you want to prioritize this product?",
                               onOk: async () => {
                                 try {
-                                  let result = await api.user.payment(authenStore.data?.id, { amount: 15000 })
-                                  if (result.status == 200) {
-                                    localStorage.setItem('token', result.data.token)
-                                    dispatch(authenAction.setData(result.data.data))
-                                    let res = await api.product.update(product.id, { priorityStatus: "active" })
-                                    if (res.status == 200) {
+                                  let res = await api.product.update(
+                                    product.id,
+                                    { priorityStatus: "active", priorityTimeLine: String(Date.now()) }
+                                  );
+                                  if (res.status == 200) {
+                                    let result = await api.user.payment(authenStore.data?.id, { amount: 15000 })
+                                    if (result.status == 200) {
+                                      setBuyPriority(true)
+                                      setupdateData(product)
+                                      dispatch(authenAction.setData(result.data.data))
+                                      localStorage.setItem('token', result.data.token)
                                       dispatch(productAction.update(res.data.data))
-                                      message.success(`${result.data.message}`)
+                                      message.success(`Bạn đã mua ưu tiên thành công!`)
+                                    } else {
+                                      await api.product.update(
+                                        product.id,
+                                        { priorityStatus: "inactive", priorityTimeLine: String(Date.now()) }
+                                      );
                                     }
-                                  }
-                                } catch (err) {
-                                  console.log(err);
 
+                                  }
+
+                                } catch (err) {
                                   message.error(`${err.response?.data?.message || "System Err"}`)
                                 }
-
                               },
                               onCancel: () => {
 
@@ -975,7 +986,7 @@ export default function UserPage() {
               <th>Des</th>
               <th>Detail</th>
               <th>Pic</th>
-              <th>Video</th>
+             
               <th>Tools</th>
             </tr>
           </thead>
@@ -1029,18 +1040,6 @@ export default function UserPage() {
                           More
                         </button>
                       </td>
-                      <td>
-                        {product.videoUrl ? <button
-                          className='btn btn-primary'
-                          onClick={() => {
-                            setDisplayVideo(true)
-                            setVideo(product.videoUrl)
-                            setupdateData({ id: product.id })
-                          }}
-                        >
-                          More
-                        </button> : <span>None</span>}
-                      </td>
                       <td style={{ display: 'flex', flexDirection: 'row' }}>
                         {product.priorityStatus != 'active' && <button
                           onClick={async () => {
@@ -1049,22 +1048,31 @@ export default function UserPage() {
                               content: "Are you sure you want to prioritize this product?",
                               onOk: async () => {
                                 try {
-                                  let result = await api.user.payment(authenStore.data?.id, { amount: 15000 })
-                                  if (result.status == 200) {
-                                    localStorage.setItem('token', result.data.token)
-                                    dispatch(authenAction.setData(result.data.data))
-                                    let res = await api.product.update(product.id, { priorityStatus: "active", priorityTimeLine: String(Date.now()) })
-                                    if (res.status == 200) {
+                                  let res = await api.product.update(
+                                    product.id,
+                                    { priorityStatus: "active", priorityTimeLine: String(Date.now()) }
+                                  );
+                                  if (res.status == 200) {
+                                    let result = await api.user.payment(authenStore.data?.id, { amount: 15000 })
+                                    if (result.status == 200) {
+                                      setBuyPriority(true)
+                                      setupdateData(product)
+                                      dispatch(authenAction.setData(result.data.data))
+                                      localStorage.setItem('token', result.data.token)
                                       dispatch(productAction.update(res.data.data))
-                                      message.success(`${result.data.message}`)
+                                      message.success(`Bạn đã mua ưu tiên thành công!`)
+                                    } else {
+                                      await api.product.update(
+                                        product.id,
+                                        { priorityStatus: "inactive", priorityTimeLine: String(Date.now()) }
+                                      );
                                     }
-                                  }
-                                } catch (err) {
-                                  console.log(err);
 
+                                  }
+
+                                } catch (err) {
                                   message.error(`${err.response?.data?.message || "System Err"}`)
                                 }
-
                               },
                               onCancel: () => {
 
@@ -1218,7 +1226,7 @@ export default function UserPage() {
           <tbody>
             {
               productStore.product.length != 0 ? productStore.product?.map((product) => {
-                if (product.status == "deny" && product.moderationStatus == "inactive") {
+                if (product.status == "deny") {
                   return (
                     <tr key={randomId()}>
                       <td>{product.id}</td>
