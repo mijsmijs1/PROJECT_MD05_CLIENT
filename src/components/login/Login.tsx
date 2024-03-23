@@ -417,7 +417,7 @@ const Login = ({ setModalVisible }: { setModalVisible: any }) => {
                         </span>
                         <p className="signup-link">
                             Don't have an account?
-                            <span className="signup-link link" href="" onClick={() => { handleSignupClick() }}>
+                            <span className="signup-link link" onClick={() => { handleSignupClick() }}>
                                 {" "}
                                 Create an account
                             </span>

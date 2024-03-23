@@ -167,7 +167,7 @@ export default function Navbar({ setModalVisible }: { setModalVisible: any }) {
       <div className="navbar_container">
         <animated.div className="navbar_container_child" style={propstyle}>
           <div className="logo">
-            <img src="../../../public/img/logo_chotroi.png" alt="" onClick={() => {
+            <img src="../../../img/logo_chotroi.png" alt="" onClick={() => {
               window.location.href = "/"
             }} />
             <div className="category">

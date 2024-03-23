@@ -95,7 +95,6 @@ export default function UserPage() {
   const [imagesToChange, setImagesToChange] = useState(null);
   const [showInfoNoEdit, setShowInfoNoEdit] = useState(null);
   const [showEditProduct, setShowEditProduct] = useState(false);
-  const [buyPriority, setBuyPriority] = useState(false);
   const goToNextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
   };
@@ -851,7 +850,6 @@ export default function UserPage() {
                                   if (res.status == 200) {
                                     let result = await api.user.payment(authenStore.data?.id, { amount: 15000 })
                                     if (result.status == 200) {
-                                      setBuyPriority(true)
                                       setupdateData(product)
                                       dispatch(authenAction.setData(result.data.data))
                                       localStorage.setItem('token', result.data.token)
@@ -1055,7 +1053,6 @@ export default function UserPage() {
                                   if (res.status == 200) {
                                     let result = await api.user.payment(authenStore.data?.id, { amount: 15000 })
                                     if (result.status == 200) {
-                                      setBuyPriority(true)
                                       setupdateData(product)
                                       dispatch(authenAction.setData(result.data.data))
                                       localStorage.setItem('token', result.data.token)
