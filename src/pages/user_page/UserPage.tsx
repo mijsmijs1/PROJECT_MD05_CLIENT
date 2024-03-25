@@ -109,7 +109,7 @@ export default function UserPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await api.product.getStatusCount(Number(authenStore.data.id));
+        const res = await api.product.getStatusCount(Number(authenStore.data?.id));
         if (res.status === 200) {
           setActiveProductCount(res.data.data.activeProductCount);
           setWaitingProductCount(res.data.data.waitingProductCount)
@@ -145,7 +145,7 @@ export default function UserPage() {
     const fetchData = async () => {
       if (status) {
         try {
-          const res = await api.product.getProductByUserId(Number(authenStore.data.id), status, (page != 0) ? Number(page) : 1);
+          const res = await api.product.getProductByUserId(Number(authenStore.data?.id), status, (page != 0) ? Number(page) : 1);
 
           if (res.status == 200) {
             dispatch(productAction.setData(res.data.data));
@@ -362,9 +362,9 @@ export default function UserPage() {
       <div className='user_content'>
         <div className='user'>
           <div className='user_left'>
-            <img src={authenStore.data.avatar.includes("img/") ? `${import.meta.env.VITE_SV_HOST}/${authenStore.data.avatar}` : authenStore.data.avatar}></img>
+            <img src={authenStore.data?.avatar.includes("img/") ? `${import.meta.env.VITE_SV_HOST}/${authenStore.data?.avatar}` : authenStore.data?.avatar}></img>
             <div className='content'>
-              <h5>{`${authenStore.data.firstName ? authenStore.data.firstName : authenStore.data.userName} ${authenStore.data.lastName ? authenStore.data.lastName : ""}`}</h5>
+              <h5>{`${authenStore.data?.firstName ? authenStore.data?.firstName : authenStore.data?.userName} ${authenStore.data?.lastName ? authenStore.data?.lastName : ""}`}</h5>
               <p>Ngày tham gia: {(new Date(Number(authenStore.data?.createAt))).toLocaleString('en-GB', options)}</p>
               <button onClick={() => {
                 setShowAvatar(true)
