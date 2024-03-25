@@ -144,7 +144,7 @@ export default function Search() {
                 className={`page-number ${page === currentPage ? 'current' : ''}`}
                 onClick={() => {
                     onPageChange(page)
-                    navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(page=)[^\&]+/, `$1${page}`)}`)
+                    navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(page=)[^\&]+/, `$1${page}`)}`)
                 }}
             >
                 {page}
@@ -166,9 +166,9 @@ export default function Search() {
                         style={{ backgroundColor: sortBy == 'time' ? "#49CC90" : "white", border: sortBy == 'time' ? "none" : "1px solid black", color: sortBy == 'time' ? "white" : "black" }}
                         onClick={() => {
                             if (!window.location.href.includes('sortBy')) {
-                                navigate(`${window.location.href.replace('http://localhost:5173', '')}&&sortBy=time`)
+                                navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&sortBy=time`)
                             } else {
-                                navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(sortBy=)[^\&]+/, `$1time`)}`)
+                                navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(sortBy=)[^\&]+/, `$1time`)}`)
                             }
                         }}
                     >Mới nhất</button>
@@ -176,17 +176,17 @@ export default function Search() {
                         style={{ backgroundColor: sortBy == 'priority' ? "#49CC90" : "white", border: sortBy == 'priority' ? "none" : "1px solid black", color: sortBy == 'priority' ? "white" : "black" }}
                         onClick={() => {
                             if (!window.location.href.includes('sortBy')) {
-                                navigate(`${window.location.href.replace('http://localhost:5173', '')}&&sortBy=priority`)
+                                navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&sortBy=priority`)
                             } else {
-                                navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(sortBy=)[^\&]+/, `$1priority`)}`)
+                                navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(sortBy=)[^\&]+/, `$1priority`)}`)
                             }
                         }}
                     >Tin ưu tiên</button>
                     <select className="form-select form-select-sm mb-3" defaultValue="" onChange={(e: React.FormEvent) => {
                         if (!window.location.href.includes('sortBy')) {
-                            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&sortBy=${(e.target as any).value}`)
+                            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&sortBy=${(e.target as any).value}`)
                         } else {
-                            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(sortBy=)[^\&]+/, `$1${(e.target as any).value}`)}`)
+                            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(sortBy=)[^\&]+/, `$1${(e.target as any).value}`)}`)
                         }
 
                     }}>
@@ -196,9 +196,9 @@ export default function Search() {
                     </select>
                     <select className="form-select form-select-sm mb-3" defaultValue="" onChange={(e: React.FormEvent) => {
                         if (!window.location.href.includes('address')) {
-                            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&address=${(e.target as any).value}`)
+                            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&address=${(e.target as any).value}`)
                         } else {
-                            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(address=)[^\&]+/, `$1${(e.target as any).value}`)}`)
+                            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(address=)[^\&]+/, `$1${(e.target as any).value}`)}`)
                         }
 
                     }}>
@@ -250,12 +250,12 @@ export default function Search() {
                     <div className="pagination">
                         <span onClick={() => {
                             onPageChange(currentPage - 1)
-                            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(page=)[^\&]+/, `$1${currentPage - 1}`)}`)
+                            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(page=)[^\&]+/, `$1${currentPage - 1}`)}`)
                         }}>&lt;</span>
                         {renderPageNumbers()}
                         <span onClick={() => {
                             onPageChange(currentPage + 1)
-                            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(page=)[^\&]+/, `$1${currentPage + 1}`)}`)
+                            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(page=)[^\&]+/, `$1${currentPage + 1}`)}`)
                         }}>&gt;</span>
                     </div>
 

@@ -183,9 +183,9 @@ export default function List() {
         onClick={() => {
           onPageChange(page)
           if (!window.location.href.includes('page')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&page=${page}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&page=${page}`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(page=)[^\&]+/, `$1${page}`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(page=)[^\&]+/, `$1${page}`)}`)
           }
         }}
       >
@@ -199,45 +199,45 @@ export default function List() {
       <div className='news_manager'>
         <div className='new_content' onClick={() => {
           if (!window.location.href.includes('status')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&status=active`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&status=active`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(status=)[^\&]+/, `$1active`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(status=)[^\&]+/, `$1active`)}`)
           }
         }}>
           <p style={status == 'active' ? { color: "blue", fontWeight: 600 } : { color: "black" }}>Tin đang rao ({activeProductCount})</p>
         </div>
         <div className='new_content' onClick={() => {
           if (!window.location.href.includes('status')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&status=inactive`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&status=inactive`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(status=)[^\&]+/, `$1inactive`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(status=)[^\&]+/, `$1inactive`)}`)
           }
         }}>
           <p style={status == 'inactive' ? { color: "blue", fontWeight: 600 } : { color: "black" }}>Tin chờ duyệt ({waitingProductCount})</p>
         </div>
         <div className='new_content' onClick={() => {
           if (!window.location.href.includes('status')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&status=done`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&status=done`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(status=)[^\&]+/, `$1done`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(status=)[^\&]+/, `$1done`)}`)
           }
         }}>
           <p style={status == 'done' ? { color: "blue", fontWeight: 600 } : { color: "black" }}>Tin đã bán ({doneProductCount})</p>
         </div>
         <div className='new_content' onClick={() => {
           if (!window.location.href.includes('status')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&status=deny`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&status=deny`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(status=)[^\&]+/, `$1deny`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(status=)[^\&]+/, `$1deny`)}`)
           }
         }}>
           <p style={status == 'deny' ? { color: "blue", fontWeight: 600 } : { color: "black" }}>Tin bị từ chối ({refusedProductCount})</p>
         </div>
         <div className='new_content' onClick={() => {
           if (!window.location.href.includes('status')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&status=delete`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&status=delete`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(status=)[^\&]+/, `$1delete`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(status=)[^\&]+/, `$1delete`)}`)
           }
         }}>
           <p style={status == 'delete' ? { color: "blue", fontWeight: 600 } : { color: "black" }}>Tin đã ẩn ({hiddenProductCount})</p>
@@ -996,18 +996,18 @@ export default function List() {
         <span onClick={() => {
           onPageChange(currentPage - 1)
           if (!window.location.href.includes('page')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&page=${currentPage - 1}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&page=${currentPage - 1}`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(page=)[^\&]+/, `$1${currentPage - 1}`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(page=)[^\&]+/, `$1${currentPage - 1}`)}`)
           }
         }}>&lt;</span>
         {renderPageNumbers()}
         <span onClick={() => {
           onPageChange(currentPage + 1)
           if (!window.location.href.includes('page')) {
-            navigate(`${window.location.href.replace('http://localhost:5173', '')}&&page=${currentPage - 1}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '')}&&page=${currentPage - 1}`)
           } else {
-            navigate(`${window.location.href.replace('http://localhost:5173', '').replace(/(page=)[^\&]+/, `$1${currentPage + 1}`)}`)
+            navigate(`${window.location.href.replace(`${import.meta.env.VITE_WEBSITE_URL}`, '').replace(/(page=)[^\&]+/, `$1${currentPage + 1}`)}`)
           }
         }}>&gt;</span>
       </div>
